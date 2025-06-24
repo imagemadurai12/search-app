@@ -1,9 +1,20 @@
-import './App.css';
+import "./App.css";
+import Widget from './components/Widget';
+import Card from './components/Card';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcomt to Search App...</h1>
+      <header>
+        <div className="wrapper">
+          <Widget/>
+        </div>
+      </header>
+      <main>
+        <div className="wrapper">
+          <Card/>
+        </div>
+      </main>
     </div>
   );
 }

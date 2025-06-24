@@ -1,3 +1,50 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* body{
+  overflow-y: scroll;
+} */
+
+header{
+  height: 30vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.323);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./images/banner-bg.jpg');
+  background-position: top 70% left 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+main{
+  height: 70vh;
+  /* background-color: darkgray; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper{
+  height: 100%;
+  width: 80%;
+  /* background-color: lightblue; */
 }
