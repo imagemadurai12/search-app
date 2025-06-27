@@ -17,6 +17,7 @@
     /* margin: 50px 0px; */
     overflow-y: scroll;
 }
+
 .card-main-container .card-sub-main-container::-webkit-scrollbar{
     visibility: hidden;
 }

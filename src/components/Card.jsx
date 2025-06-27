@@ -1,10 +1,19 @@
 import React from 'react'
 import '../css/Card.css';
 
-function Card() {
+function Card(props) {
   return (
     <div className='card-main-container'>
       <div className="card-sub-main-container">
+        <p>{props.sId}</p>
+        <h1>{props.sName}</h1>
+        <p>{props.sLoc}</p>
+        <br />
+        </div>
+             {/* <div className="card-sub-main-container">
+
+
+
           <div className="card-container">
               <h1>Card</h1>
           </div>
@@ -16,8 +25,8 @@ function Card() {
           </div>
           <div className="card-container">
               <h1>Card</h1>
-          </div>
-      </div>
+          </div> 
+      </div>*/}
 
     </div>
   )
