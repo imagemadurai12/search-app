@@ -36,42 +36,27 @@ function App() {
         if(elem.serviceName.toLowerCase().search(searchQuery.toLowerCase())!==-1)
         {
           updatedResults.push(elem);
-          categoryStates.push(elem);
+          categoryStates.push(selectedCategory);
           // console.log(updatedResults);
           // console.log(categoryStates);
         }
-
-
        });
        setResult(updatedResults);
        setCategory(categoryStates);
      } 
+
      else {
        allCategoriesList.forEach((elem) => {
-        // console.log(elem);
-        
          console.log(elem);
-        //  console.log(elem.locations);
-
-        // if(elem.serviceName.toLowerCase().search(searchQuery.toLowerCase())!==-1)
-        // {
-        //   updatedResults.push(elem);
-        //   categoryStates.push(elem);
-        //   // console.log(updatedResults);
-        //   // console.log(categoryStates);
-        // }
-
        });
-      //  setResult(updatedResults);
-      //  setCategory(categoryStates);
      }
-      
     })
+
     .catch((error)=>
     {
       console.log(error);
-      
     })
+    
   }
 
 
@@ -92,7 +77,7 @@ function App() {
               // console.log(res.serviceName)
               // console.log(res.locations)
 
-              <Card key={res.serviceID} sId={res.serviceID} sName={res.serviceName} sLoc={res.locations}/>
+              <Card key={res.serviceID} sId={res.serviceID} sName={res.serviceName} sLoc={res.locations} sType={category[ind]}/>
 
 
             ))
