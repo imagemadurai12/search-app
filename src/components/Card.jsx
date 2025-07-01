@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/Card.css";
 
 function Card(props) {
-  const number = 0;
+  const [number,setNumber] = useState(0);
   const [locations, setLocations] = useState([]);
 
   const getRoute = () => {
@@ -64,6 +64,7 @@ function Card(props) {
       RT230: ["Dubai, UAE", "Port Louis, Singapore"],
       RT231: ["Trichy, India", "Port Louis, Singapore"],
       RT232: ["Chennai, India", "Bali, Indonesia"],
+      RT233: ["Chennai, Thailand", "Bali, Bangalore"],
     };
     const routes = props.sLoc;
     const resultLocations = [];
@@ -98,6 +99,7 @@ function Card(props) {
       // console.log(resultLocations);
     });
     setLocations(resultLocations);
+    setNumber(resultLocations.length);
   };
 
   useEffect(() => {getRoute()}, []);

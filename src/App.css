@@ -31,7 +31,7 @@ header .wrapper {
 }
 
 main{
-  height: auto;
+  height: 70vh;
   /* background-color: darkgray; */
   display: flex;
   align-items: center;
@@ -39,6 +39,7 @@ main{
   overflow-y: scroll;
 }
 main .wrapper {
+  width: 60%;
   /* display: flex;
   align-items: center;
   justify-content: center;

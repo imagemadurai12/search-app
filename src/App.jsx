@@ -46,9 +46,25 @@ function App() {
      } 
 
      else {
-       allCategoriesList.forEach((elem) => {
-         console.log(elem);
+       allCategoriesList.forEach((cate) => {
+        //  console.log(cate);
+        let bmtServices=response.data[cate];
+        // console.log(bmtServices);
+
+        bmtServices.forEach((elem)=>
+        {
+          // console.log(elem);
+          if(elem.serviceName.toLowerCase().search(searchQuery.toLowerCase())!==-1)
+          {
+            updatedResults.push(elem);
+            categoryStates.push(cate);
+            // console.log(updatedResults);
+            // console.log(categoryStates);
+          }
+        })
        });
+       setResult(updatedResults);
+       setCategory(categoryStates);
      }
     })
 
